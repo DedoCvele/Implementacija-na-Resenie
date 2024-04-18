@@ -4,10 +4,14 @@
     --Font-colors: #F3EDFC;
     --Button-hover-effect: #5d30a5;
     --Labaratorium: #E5A648;
+    --Footer: #000000;
 }
 
 body{
     background-color: var(--Brainser-Background-color);
+    box-sizing: border-box;
+    margin: 0;
+  padding: 0;
 }
 
 /* ------------DELOT ZA NAVBAROT ---------------------*/
@@ -121,3 +125,63 @@ body{
 
 /*------------------HERO SECTION DELOT*/
 
+/*------------FOOTER----------------*/
+
+footer{
+    width: 100%;
+    background-color: var(--Footer);
+}
+
+.first_part{
+   
+    display: flex;
+    justify-content: center;
+}
+
+.footer_container{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 42px;
+}
+
+.media_logos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.logos{
+    display: flex;
+    gap: 32px;
+}
+
+/*----------------Line------------*/
+
+.line{
+    width: 80%;
+    border-color: #525252
+}
+
+/*---------END CREDITS------------*/
+
+.end_credits{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.end_container{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--Font-colors);
+    font-size: 12px;
+}
+
+.end_container a{
+    color: var(--Font-colors);
+}
