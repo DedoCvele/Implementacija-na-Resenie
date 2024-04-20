@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="swiper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
   </head>
   <body>
+
+    <!-- Navbar -->
     <nav class="main_nav">
       <div class="nav_container">
         <div class="logo">
@@ -31,9 +36,34 @@
       </div>
     </nav>
 
+
+    <!-- Hero -->
     <section id="Hero">
-        
+      <div class="swiper-container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./assets/pic1.png" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/pic1.png" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/pic1.png" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/pic1.png" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/pic1.png" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <div class="vecer">
+      <div class="vecer_container">
+      <h1>Каде одиме вечер?</h1>
+      <img src="./assets/krugcinja/vecer.png" alt="">
+    </div>
+    </div>
+
+
+    <!-- Footer -->
 
     <footer>
       <div class="first_part">
@@ -71,7 +101,32 @@
         </div>
     </div>
 
-
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+      });
+    </script>
     </footer>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+
+            return '<span class="' + className + '">' + "<img src=" + "./assets/pic1.png" + ">" + "</span>";
+          },
+        },
+      });
+    </script>
+
+    <script src="index.js"></script>
   </body>
 </html>
