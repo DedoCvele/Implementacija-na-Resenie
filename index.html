@@ -106,60 +106,6 @@
               </div>
             </div>
 
-            <div class="swiper-slide">
-              <div class="mini-container">
-              <div class="hero-continer">
-                <div class="hero-details">
-                  
-                  <!-- Ovde ke treba od baza da se zeme Title-ot -->
-                  <p class="Hero-text">Biggest brainster Party</p>
-
-                  <div class="hero-time">
-                    <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
-                    <p>01.03.2024</p>
-                    <p>20:00h</p>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="mini-container">
-              <div class="hero-continer">
-                <div class="hero-details">
-                  
-                  <!-- Ovde ke treba od baza da se zeme Title-ot -->
-                  <p class="Hero-text">Biggest brainster Party</p>
-
-                  <div class="hero-time">
-                    <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
-                    <p>01.03.2024</p>
-                    <p>20:00h</p>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide" style="background-image: url(./assets/pic2.png);">
-              <div class="mini-container">
-              <div class="hero-continer">
-                <div class="hero-details">
-                  
-                  <!-- Ovde ke treba od baza da se zeme Title-ot -->
-                  <p class="Hero-text">Biggest brainster Party 5</p>
-
-                  <div class="hero-time">
-                    <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
-                    <p>01.03.2024</p>
-                    <p>20:00h</p>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div>
-
 
           </div>
           <div class="swiper-pagination"></div>
@@ -230,11 +176,9 @@
       </div>
     </footer>
 
-
     <script>
       var swiper = new Swiper(".mySwiper", {
 
-        freeMode: true,
 
         autoplay: {
         delay: 2500,
@@ -245,24 +189,11 @@
           el: ".swiper-pagination",
           clickable: true,
           renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
+           return '<span class="custon-shape ' + className + '">' + (index + 1) + '</span>';        
           },
         },
       });
     </script>
-
-    <!-- <script>
-      var swiper = new Swiper(".mySwiper", {
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          renderBullet: function (index, className) {
-
-            return '<span class="' + className + '">' + "<img src=" + "./assets/pic1.png" + ">" + "</span>";
-          },
-        },
-      });
-    </script> -->
 
     <script src="index.js"></script>
   </body>
