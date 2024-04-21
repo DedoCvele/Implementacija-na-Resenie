@@ -11,7 +11,8 @@ body{
     background-color: var(--Brainser-Background-color);
     box-sizing: border-box;
     margin: 0;
-  padding: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 /* ------------DELOT ZA NAVBAROT ---------------------*/
@@ -136,6 +137,7 @@ body{
 /* ------------------------------VECER------------------ */
 
 .vecer{
+    margin-top: 78px;
     width: 100%;
     display: flex;
     align-items: center;

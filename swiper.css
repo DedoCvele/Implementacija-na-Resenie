@@ -12,11 +12,25 @@
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background-image: url(./assets/pic1.png);
+    position: relative; /* Necessary for positioning the pseudo-element */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    border-radius: 30px;
+    height: 50%;
+}
+
+.swiper-slide::before {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  border-radius: 30px;
+}
 
   .swiper-slide img {
     display: block;
@@ -40,3 +54,67 @@
     color: #fff;
     background: #007aff;
   }
+
+
+
+
+  .mini-container{
+    position: relative;
+    height: 800px;
+    color: #F3EDFC;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .hero-container{
+    height: inherit;
+    width: inherit;
+  }
+
+  .hero-details{
+    background-image: url(./assets/krugcinja/hero.png);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    margin-left: 215px;
+  }
+
+  .Hero-text{
+    font-size: 54px;
+    font-weight: bold;
+    padding-left: 60px;
+    margin-bottom: 0;
+  }
+
+  .hero-time {
+    display: flex;
+    margin-left: 65px;
+    margin-top: -15px;
+  }
+  
+  .hero-time p {
+    margin-right: 70px ; 
+    font-size: 28px;
+  }
+  /*
+  .hero-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-text{
+    margin-left: -150px;
+    font-size: 64px;
+  }
+
+  .mini-container img{
+   width: 212px;
+   height: 212px;
+   overflow: visible;
+  } */
