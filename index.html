@@ -48,67 +48,80 @@
       <div class="swiper-container">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-
             <!-- Vo swiper slide ke treba slikata od baza da se zeme -->
             <!-- I da se dodade vo style da se dodade slikata background-image: url(./assets/pic1.png); primer kako bi licelo -->
             <div class="swiper-slide">
               <div class="mini-container">
-              <div class="hero-continer">
-                <div class="hero-details">
-                  
-                  <!-- Ovde ke treba od baza da se zeme Title-ot -->
-                  <p class="Hero-text">Biggest brainster Party</p>
+                <div class="hero-continer">
+                  <div class="hero-details">
+                    <!-- Ovde ke treba od baza da se zeme Title-ot -->
+                    <p class="Hero-text">Biggest brainster Party1</p>
 
-                  <div class="hero-time">
-                    <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
-                    <p>01.03.2024</p>
-                    <p>20:00h</p>
+                    <div class="hero-time">
+                      <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
+                      <p>01.03.2024</p>
+                      <p>20:00h</p>
+                    </div>
                   </div>
                 </div>
-              </div>
               </div>
             </div>
 
-
-            <div class="swiper-slide" style="background-image: url(./assets/pic2.png);">
+            <div
+              class="swiper-slide"
+              style="background-image: url(./assets/pic2.png)"
+            >
               <div class="mini-container">
-              <div class="hero-continer">
-                <div class="hero-details">
-                  
-                  <!-- Ovde ke treba od baza da se zeme Title-ot -->
-                  <p class="Hero-text">Biggest brainster Party 5</p>
+                <div class="hero-continer">
+                  <div class="hero-details">
+                    <!-- Ovde ke treba od baza da se zeme Title-ot -->
+                    <p class="Hero-text">Biggest brainster Party 2</p>
 
-                  <div class="hero-time">
-                    <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
-                    <p>01.03.2024</p>
-                    <p>20:00h</p>
+                    <div class="hero-time">
+                      <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
+                      <p>01.03.2024</p>
+                      <p>20:00h</p>
+                    </div>
                   </div>
                 </div>
-              </div>
               </div>
             </div>
 
             <div class="swiper-slide">
               <div class="mini-container">
-              <div class="hero-continer">
-                <div class="hero-details">
-                  
-                  <!-- Ovde ke treba od baza da se zeme Title-ot -->
-                  <p class="Hero-text">Biggest brainster Party</p>
+                <div class="hero-continer">
+                  <div class="hero-details">
+                    <!-- Ovde ke treba od baza da se zeme Title-ot -->
+                    <p class="Hero-text">Biggest brainster Party3</p>
 
-                  <div class="hero-time">
-                    <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
-                    <p>01.03.2024</p>
-                    <p>20:00h</p>
+                    <div class="hero-time">
+                      <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
+                      <p>01.03.2024</p>
+                      <p>20:00h</p>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Hero2">
+      <div class="swiper-container">
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" onclick="mitre(1)">
+              <div class="custom-shape">
+                <h1>text</h1>
               </div>
             </div>
-
-
+            <div class="swiper-slide">2</div>
+            <div class="swiper-slide">3</div>
+            <div class="swiper-slide">4</div>
+            <div class="swiper-slide">5</div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -178,21 +191,25 @@
 
     <script>
       var swiper = new Swiper(".mySwiper", {
-
-
         autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
+          delay: 2500,
+          disableOnInteraction: false,
         },
-
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          renderBullet: function (index, className) {
-           return '<span class="custon-shape ' + className + '">' + (index + 1) + '</span>';        
-          },
-        },
+        preventClicks: false,
+        preventClicksPropagation: false,
       });
+
+      var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        autoplay: false,
+        grabCursor: true,
+      });
+
+      function mitre(id) {
+        swiper.slideTo(id);
+      }
     </script>
 
     <script src="index.js"></script>
