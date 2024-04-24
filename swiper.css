@@ -57,9 +57,6 @@
     background: #007aff;
   }
 
-
-
-
   .mini-container{
     position: relative;
     height: 800px;
@@ -68,6 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: start;
+    margin-left: -550px;
   }
 
   .hero-container{
@@ -84,6 +82,7 @@
     justify-content: center;
     height: inherit;
     margin-left: 215px;
+    margin-top: -200px;
   }
 
   .Hero-text{
@@ -120,11 +119,7 @@
 #Hero2{
   overflow-x: hidden;
   margin-top: -150px;
-}
-
-.hero2-container{
   width: 100vw;
-  
 }
 
 .swiper-slide2{
@@ -141,8 +136,4 @@
 
 .swiper-wrapper2 > div:last-child > div {
   margin-right: 7rem;
-}
-
-.swiper-slide2{
-  background-image: rgba(0,0,0,0) !important;
 }

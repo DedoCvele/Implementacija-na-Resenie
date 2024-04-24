@@ -13,6 +13,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 /* ------------DELOT ZA NAVBAROT ---------------------*/
@@ -103,7 +104,7 @@ body{
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 99;
     right: 16px; 
 }
   
@@ -137,11 +138,15 @@ body{
 /* ------------------------------VECER------------------ */
 
 .vecer{
-    margin-top: 78px;
+    margin-top: 25px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.vecer h1{
+    margin-top: 12px;
 }
 
 .vecer_container{
@@ -155,14 +160,15 @@ body{
     position: relative;
     left: -49px;
     z-index: -1;
-    width: auto;
-    height: auto;
+    width: 75px;
+    height: 75px;
 }
 
 
 /*------------FOOTER----------------*/
 
 footer{
+    padding-top: 24px;
     width: 100%;
     background-color: var(--Footer);
 }
@@ -215,8 +221,31 @@ footer{
     justify-content: space-between;
     color: var(--Font-colors);
     font-size: 12px;
+    padding-bottom: 12px;
 }
 
 .end_container a{
     color: var(--Font-colors);
+}
+
+/*  ----------------------MALITE KARTI--------------------*/
+
+.little_card{
+    padding-left: 12px;
+    color: var(--Font-colors);
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    margin: 0;
+}
+
+.little_card h1{
+    margin: 0;
+}
+
+.little_info{
+    display: flex;
+    gap: 20px;
 }
