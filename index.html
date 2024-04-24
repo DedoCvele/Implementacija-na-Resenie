@@ -103,24 +103,81 @@
                 </div>
               </div>
             </div>
+
+            <div
+              class="swiper-slide"
+              style="background-image: url(./assets/pic2.png)"
+            >
+              <div class="mini-container">
+                <div class="hero-continer">
+                  <div class="hero-details">
+                    <!-- Ovde ke treba od baza da se zeme Title-ot -->
+                    <p class="Hero-text">Biggest brainster Party 4</p>
+
+                    <div class="hero-time">
+                      <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
+                      <p>01.03.2024</p>
+                      <p>20:00h</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="mini-container">
+                <div class="hero-continer">
+                  <div class="hero-details">
+                    <!-- Ovde ke treba od baza da se zeme Title-ot -->
+                    <p class="Hero-text">Biggest brainster Party5</p>
+
+                    <div class="hero-time">
+                      <!-- Ovde ke treba od baza da se zemat datumot i saatot -->
+                      <p>01.03.2024</p>
+                      <p>20:00h</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section id="Hero2">
-      <div class="swiper-container">
-        <div class="swiper mySwiper2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" onclick="mitre(1)">
-              <div class="custom-shape">
-                <h1>text</h1>
+      <div class="hero2-container">
+        <div class="trueHero">
+          <div class="swiper-container2">
+            <div class="swiper mySwiper2">
+              <div class="swiper-wrapper swiper-wrapper2">
+                <div class="swiper-slide swiper-slide2" onclick="mitre(0)">
+                  <div class="custom-shape">
+                    <h1>text</h1>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide2" onclick="mitre(1)">
+                  <div class="custom-shape">
+                    <h1>text</h1>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide2" onclick="mitre(2)">
+                  <div class="custom-shape">
+                    <h1>text</h1>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide2" onclick="mitre(3)">
+                  <div class="custom-shape">
+                    <h1>text</h1>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide2" onclick="mitre(4)">
+                  <div class="custom-shape">
+                    <h1>text</h1>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="swiper-slide">2</div>
-            <div class="swiper-slide">3</div>
-            <div class="swiper-slide">4</div>
-            <div class="swiper-slide">5</div>
           </div>
         </div>
       </div>
@@ -200,8 +257,8 @@
       });
 
       var swiper2 = new Swiper(".mySwiper2", {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: "auto",
+        spaceBetween: 50,
         freeMode: true,
         autoplay: false,
         grabCursor: true,
