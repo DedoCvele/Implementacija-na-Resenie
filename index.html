@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="swiper.css" />
+    <link rel="stylesheet" href="calendar.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -16,6 +17,62 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js'></script>
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          firstDay: 1,
+          weekNumberCalculation: 'ISO',
+          timeZone: 'Europe/Skopje',
+          height: "auto",
+          themeSystem: 'bootstrap',
+          slotDuration: { days: 1 },
+          select: handleDateSelect.bind(this),
+          eventClick: handleDateClick.bind(this),
+          eventTimeFormat: { hour: '2-digit', minute: '2-digit', hour12: false },
+          dayHeaderContent: (args) => {
+            const dayNames = [
+              "НЕДЕЛА",
+              "ПОНЕДЕЛНИК",
+              "ВТОРНИК",
+              "СРЕДА",
+              "ЧЕТВРТОК",
+              "ПЕТОК",
+              "САБОТА",
+            ];
+            const dayName = dayNames[args.date.getUTCDay()];
+            return dayName;
+          },
+          headerToolbar: {
+              left: 'prev',
+              center: 'title',
+              right: 'next'
+            },
+            events: [
+                    
+                    { title: 'Brainster Event', start: '2024-05-26T20:00:00', className: 'fc-event-brainster' },
+                    { title: 'MOB Event', start: '2024-05-26T22:00:00', className: 'fc-event-mob' },
+                    
+                ]  
+
+        });
+        calendar.render();
+      });
+
+      function handleDateSelect(args) {
+
+      }
+
+      function handleDateClick(args){
+
+      }
+
+    </script>
+
   </head>
   <body>
     <!-- Navbar -->
@@ -222,8 +279,14 @@
       </div>
     </div>
 
-    
+    <!-- Kalendarot kade treba da ide -->
+<section class="calendar-container">
 
+
+    <div class="calendar-wrapper">
+    <div id='calendar'></div>
+  </div>
+</section>
     <!-- Footer -->
 
     <footer>
