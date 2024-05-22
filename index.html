@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="swiper.css" />
     <link rel="stylesheet" href="calendar.css" />
+    <link rel="stylesheet" href="kopce.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -17,23 +18,26 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js"></script>
 
     <script>
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
+          initialView: "dayGridMonth",
           firstDay: 1,
-          weekNumberCalculation: 'ISO',
-          timeZone: 'Europe/Skopje',
+          weekNumberCalculation: "ISO",
+          timeZone: "Europe/Skopje",
           height: "auto",
-          themeSystem: 'bootstrap',
+          themeSystem: "bootstrap",
           slotDuration: { days: 1 },
           select: handleDateSelect.bind(this),
           eventClick: handleDateClick.bind(this),
-          eventTimeFormat: { hour: '2-digit', minute: '2-digit', hour12: false },
+          eventTimeFormat: {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+          },
           dayHeaderContent: (args) => {
             const dayNames = [
               "НЕДЕЛА",
@@ -48,31 +52,30 @@
             return dayName;
           },
           headerToolbar: {
-              left: 'prev',
-              center: 'title',
-              right: 'next'
+            left: "prev",
+            center: "title",
+            right: "next",
+          },
+          events: [
+            {
+              title: "Brainster Event",
+              start: "2024-05-26T20:00:00",
+              className: "fc-event-brainster",
             },
-            events: [
-                    
-                    { title: 'Brainster Event', start: '2024-05-26T20:00:00', className: 'fc-event-brainster' },
-                    { title: 'MOB Event', start: '2024-05-26T22:00:00', className: 'fc-event-mob' },
-                    
-                ]  
-
+            {
+              title: "MOB Event",
+              start: "2024-05-26T22:00:00",
+              className: "fc-event-mob",
+            },
+          ],
         });
         calendar.render();
       });
 
-      function handleDateSelect(args) {
+      function handleDateSelect(args) {}
 
-      }
-
-      function handleDateClick(args){
-
-      }
-
+      function handleDateClick(args) {}
     </script>
-
   </head>
   <body>
     <!-- Navbar -->
@@ -207,7 +210,6 @@
       <div class="swiper-container2">
         <div class="swiper mySwiper2">
           <div class="swiper-wrapper swiper-wrapper2">
-
             <div class="swiper-slide swiper-slide2" onclick="mitre(0)">
               <div class="custom-shape">
                 <div class="little_card">
@@ -280,13 +282,27 @@
     </div>
 
     <!-- Kalendarot kade treba da ide -->
-<section class="calendar-container">
+    <section class="calendar-container">
+      <div class="calendar-wrapper">
+        <div id="calendar"></div>
+      </div>
+    </section>
 
+    <!-- Kopce -->
 
-    <div class="calendar-wrapper">
-    <div id='calendar'></div>
-  </div>
-</section>
+    <div id="kopce">
+      <button id="dugme" onclick="popUp()">
+        yey :D
+      </button>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="popup" class="popup">
+    <span class="close" onclick="closePopUp()">&times;</span>
+    <p>This is the popup content.</p>
+    </div>
+
     <!-- Footer -->
 
     <footer>

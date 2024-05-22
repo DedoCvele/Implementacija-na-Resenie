@@ -114,9 +114,6 @@
     padding: 8px; /* Adjust the padding around the whole calendar */
 }
 
-.fc-day .fc-day-wed .fc-day-today .fc-daygrid-day{
-    background-color: none;
-}
 
 /* Optional: Custom styling for event elements */
 .fc-event {
