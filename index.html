@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="swiper.css" />
     <link rel="stylesheet" href="calendar.css" />
-    <link rel="stylesheet" href="kopce.css">
+    <link rel="stylesheet" href="kopce.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -57,6 +57,7 @@
             right: "next",
           },
           events: [
+
             {
               title: "Brainster Event",
               start: "2024-05-26T20:00:00",
@@ -67,14 +68,50 @@
               start: "2024-05-26T22:00:00",
               className: "fc-event-mob",
             },
+            {
+              title: "MOB Event",
+              start: "2024-05-26T22:00:00",
+              className: "fc-event-mob",
+            },
+            {
+              title: "MOB Event",
+              start: "2024-05-26T22:00:00",
+              className: "fc-event-mob",
+            },
+            {
+              title: "MOB Event",
+              start: "2024-05-26T22:00:00",
+              className: "fc-event-mob",
+            },
+            {
+              title: "MOB Event",
+              start: "2024-05-26T22:00:00",
+              className: "fc-event-mob",
+            },
+            {
+              title: "MOB Event",
+              start: "2024-05-26T22:00:00",
+              className: "fc-event-mob",
+            }       
           ],
+          eventContent: function (arg) {
+            return {
+              html:
+                '<div class="fc-event-container">' + arg.event.title + "</div>",
+            };
+          },
+          dateClick: function () {
+            popUp();
+          },
         });
+
+        function handleDateSelect(args) {}
+
+        function handleDateClick(args) {}
         calendar.render();
       });
 
-      function handleDateSelect(args) {}
-
-      function handleDateClick(args) {}
+      
     </script>
   </head>
   <body>
@@ -290,17 +327,11 @@
 
     <!-- Kopce -->
 
-    <div id="kopce">
-      <button id="dugme" onclick="popUp()">
-        yey :D
-      </button>
-    </div>
-
     <div id="overlay" class="overlay"></div>
 
     <div id="popup" class="popup">
-    <span class="close" onclick="closePopUp()">&times;</span>
-    <p>This is the popup content.</p>
+      <span class="close" onclick="closePopUp()">&times;</span>
+      <p>This is the popup content.</p>
     </div>
 
     <!-- Footer -->
